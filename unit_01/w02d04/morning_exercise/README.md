@@ -21,13 +21,20 @@ as you work.
 ## Instructions
 
 Write a function called `makeChange`, which will take two arguments,
-a purchase price and an amount of money tendered; it will return an array of the
+a purchase price and an amount of money tendered;
+
+it will return an array of the
 quantities of quarters, dimes, nickels and pennies that it must give back
 in order to make proper change (without giving too many smaller coins).
 
 Here's an example of how this should work.
+
 Say we want to buy something for $5.60, and we pay $6.00;
-we should get back 1 quarter, 1 dime, and 1 nickel. If the item was, instead,
+
+we should get back 1 quarter, 1 dime, and 1 nickel.
+
+If the item was, instead,
+
 $5.62, we would get back 1 quarter, 1 dime, and 3 pennies.
 
 ```js
