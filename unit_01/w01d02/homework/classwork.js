@@ -8,6 +8,7 @@
 // For each expression below, indicate whether it is 'truthy' or 'falsey'
 // by assigning the appropriate variable a value of either `true` or `false`.
 
+<<<<<<< HEAD
 // 1. true || false
 var resOne = ( 1 === 1 || 1 ===  2);
 true
@@ -30,11 +31,33 @@ false
 // 5. !null && !undefined
 var resFive;
 true
+=======
+// 1. true || false 
+var resOne;
+// Replace This Comment With Your Code
+
+// 2. null || ''
+var resTwo;
+// Replace This Comment With Your Code
+
+// 3. 'false' && true
+var resThree;
+// Replace This Comment With Your Code
+
+// 4. !!0
+var resFour;
+// Replace This Comment With Your Code
+
+// 5. !null && !undefined
+var resFive;
+// Replace This Comment With Your Code
+>>>>>>> 0a0961d6539d4b047d99e21897bbb5e0c0e0ee24
 
 /// Flow Control ///
 
 // 6. Write a `while` loop that increases `resSix` by 23 until `resSix` is five
 //    digits long. (Hint: take a look at the .toString() method)
+<<<<<<< HEAD
 var resSix = 5;
 console.log(resSix.toString().length);
 
@@ -52,10 +75,15 @@ Answer:
 
 
 
+=======
+var resSix;
+// Replace This Comment With Your Code
+>>>>>>> 0a0961d6539d4b047d99e21897bbb5e0c0e0ee24
 
 // 7. Write a `while` loop that increases `resSeven` by 12 when it's strictly
 //    below 95, decreases it by 7 when it's strictly above 105, and stops as
 //    soon as `resSeven` equals or falls between those two values.
+<<<<<<< HEAD
 var resSeven = 65;
 while (resSeven === 105 || resSeven === 95) {
   if (resSeven > 105) {
@@ -64,6 +92,10 @@ while (resSeven === 105 || resSeven === 95) {
     resSeven += 12;
   }
 }
+=======
+var resSeven;
+// Replace This Comment With Your Code
+>>>>>>> 0a0961d6539d4b047d99e21897bbb5e0c0e0ee24
 
 console.log(resSeven);
 Answer = 101
