@@ -1,0 +1,15 @@
+<h1>Pirate Directory</h1>
+<h2>You have {{pirateName.length}} pirates on your list.</h2>
+
+<!-- #each is for each loop -->
+<ul class="pirates_list">
+  {{#each pirateName}}
+    <li><a href="/pirates/{{@index}}">{{name}}</a></li>
+  {{/each}}
+</ul>
+
+<div>
+  <form action="/pirates/new">
+    <input type="submit" value="Add a New Pirate"/>
+  </form>
+</div>
