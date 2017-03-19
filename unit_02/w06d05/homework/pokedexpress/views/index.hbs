@@ -1,0 +1,14 @@
+<ul>
+{{#each pokemonList}}
+<!-- {{@index}} refers to the index value of the element as it's being looped over -->
+<!-- for example: if it's the fifth time the loop has ran, were pulling out pokemonList[5] -->
+<!-- then {{@index}} would be 5 -->
+	<a href="/pokemon/index/{{@index}}">
+		<li>
+			<p>{{id}}</p>
+			<p>{{name}}</p>
+			<img src="{{img}}">
+		</li>
+	</a>
+{{/each}}
+</ul>

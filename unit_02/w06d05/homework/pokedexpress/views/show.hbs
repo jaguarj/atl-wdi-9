@@ -1,0 +1,12 @@
+{{pokemon.name}}
+
+<img src="{{pokemon.img}}">
+<p>{{pokemon.type}}</p>
+<p>{{#each pokemon.stats}}
+	{{@key}}: {{this}}
+	<br>
+
+{{/each}}
+</p>
+
+
