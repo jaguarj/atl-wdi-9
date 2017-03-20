@@ -10,10 +10,15 @@ function Tamagotchi(name, creatureType, foodInTummy, restedness, health) {
 
 	this.cry = function(){
 		this.foodInTummy--;
-
 		console.log('foodInTummy');
 		console.log('this.name');
 		console.log('WAHH!!');
+
+	};
+
+	this.puke = function() {
+		this.foodInTummy--;
+		console.log('foodInTummy' + 'WAHH!');
 
 	}
 
