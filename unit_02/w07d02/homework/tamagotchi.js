@@ -26,6 +26,29 @@ function Tamagotchi(name, creatureType, foodInTummy, restedness, health) {
 		console.log(`${this.name} has the current restedness of: ${this.restedness}`);
 	};
 
+	this.start = function myFunction() {
+
+	var _that = this;//Set this to a variable to use later. Then append to this.
+
+   	 this.hungerTimer = setInterval(function(){ _that.cry(); }, 6000);
+		console.log(`${name}`);
+	 this.yawnTimer = setInterval(function(){ _that.yawn(); }, 10000);
+		console.log(`${name}`);
+	 this.sickTimer = setInterval(function(){ _that.sick(); }, 20000);
+		console.log(`${name}`);
+
+
+	};
+	this.stop = function myStopFunction() {
+	clearInterval(this.hungerTimer);
+	clearInterval(this.yawnTimer);
+	clearInterval(this.sickTimer);
+
+
+
+
+
+}
 }
 
 //create new Tamagotchis
