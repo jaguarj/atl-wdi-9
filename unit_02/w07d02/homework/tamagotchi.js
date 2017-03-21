@@ -10,15 +10,14 @@ function Tamagotchi(name, creatureType, foodInTummy, restedness, health) {
 
 	this.cry = function(){
 		this.foodInTummy--;
-		console.log('foodInTummy');
-		console.log('this.name');
+		console.log(`${this.name}`);
 		console.log('WAHH!!');
-
+		console.log(`${this.foodInTummy}`);
 	};
 
 	this.puke = function() {
 		this.foodInTummy--;
-		console.log('foodInTummy' + 'WAHH!');
+		console.log(`${this.foodInTummy} WAHH!`);
 
 	};
 
@@ -34,6 +33,8 @@ var carla = new Tamagotchi("Carla", "dog");
 var mike = new Tamagotchi("Mike", "cat");
 var james = new Tamagotchi("James", "penguin");
 var sara = new Tamagotchi("Sara", "lion");
+var bill = new Tamagotchi("Bill", "bear");
+var josh = new Tamagotchi("Josh", "tiger");
 
 
 //test out your Tamagotchies below via console.logs
