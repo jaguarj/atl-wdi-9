@@ -15,3 +15,27 @@ var player = {
     console.log(tamagotchi.name + ' got some Zzzzs! Restedness: ' + tamagotchi.restedness);
   }
 }; //end player
+
+player.feedTamagotchi(carla);
+player.medicateTamagotchi(carla);
+player.knockOutTamagotchi(carla);
+
+player.feedTamagotchi(james);
+player.medicateTamagotchi(james);
+player.knockOutTamagotchi(james);
+
+player.feedTamagotchi(mike);
+player.medicateTamagotchi(mike);
+player.knockOutTamagotchi(mike);
+
+player.feedTamagotchi(sara);
+player.medicateTamagotchi(sara);
+player.knockOutTamagotchi(sara);
+
+player.feedTamagotchi(bill);
+player.medicateTamagotchi(bill);
+player.knockOutTamagotchi(bill);
+
+player.feedTamagotchi(josh);
+player.medicateTamagotchi(josh);
+player.knockOutTamagotchi(josh);
