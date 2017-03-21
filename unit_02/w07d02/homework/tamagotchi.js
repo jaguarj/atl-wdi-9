@@ -20,7 +20,12 @@ function Tamagotchi(name, creatureType, foodInTummy, restedness, health) {
 		this.foodInTummy--;
 		console.log('foodInTummy' + 'WAHH!');
 
-	}
+	};
+
+	this.yawn = function() {
+		this.restedness--;
+		console.log(`${this.name} has the current restedness of: ${this.restedness}`);
+	};
 
 }
 
@@ -39,7 +44,7 @@ console.log(james);
 console.log(sara);
 
 // Invoke the Cry function
-createNewTama1.cry();
+
 carla.cry();
 mike.cry();
 james.cry();
