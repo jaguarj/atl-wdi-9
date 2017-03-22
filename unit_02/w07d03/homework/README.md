@@ -32,11 +32,38 @@ This app provides easy access to all your e-mail service providers in one app. T
 ```
 Write your answer here or in a separate js file.
 ```
+Example 1.
+
+var exampleConsumer = {
+	id: 43,
+	name: "Josh",
+	primaryEmail: "josh@gmail.com",
+	password = 12345678,
+	mobilPhone = 4045559999,
+	emailSubscripitons: [{
+		id: 43,
+		primaryEmail: "josh@gmail.com",
+		primaryPassword: 12345678,
+		secdonaryEmail: "josh@aol.com",
+		secondaryPassword: 11111111,
+		thirdEmail: "josh@work.com",
+		thirdPassword: 11111111
+		}]
+
+}
 
 ### 2. Radio on the Internet app
 
 This app hosts a ton of radio stations, each featuring their own playlists of songs. The radio stations can be listed by genre or popularity.
 
+var radioStations = {
+	genres: [{
+		pop: [{"Down Town"}, {"Modern Pop"}],
+		rock: [{"Classic Rock"}, {"Modern Rock"}],
+		hip-hop: [{"Classic Hip Hop"}, {"Trap"}],
+		country: [{"Classic Country Hits"}, {"Farmers Only Mix"}]
+	}]
+}
 
 ```
 Write your answer here or in a separate js file.
@@ -50,9 +77,40 @@ This app will be a tool for managing all of your favorite bands' concerts; it wi
 Write your answer here or in a separate js file.
 ```
 
+var favBands = [{
+	the-clash:  [{concerts-dates}, {tickets}, {upcoming-shows-nearby}],
+	tame-impala:  [{concerts-dates}, {tickets}, {upcoming-shows-nearby}]
+}]
+
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
+
+var coffeeshopsNearBy = {
+	city: "Athens",
+	state: "Georgia",
+	country: "USA",
+	postalCode: "30316"
+},
+var joes = {
+	city: "Athens",
+	state: "Georgia",
+	country: "USA",
+	postalCode: "30316"
+	location: "123 Elm Way",
+	phone: 2223334444,
+	menu: [{"Coffes"}, {"Tea"}, {"Food"}]
+},
+
+var joes = {
+	city: "Athens",
+	state: "Georgia",
+	country: "USA",
+	postalCode: "30316"
+	location: "24 Jackson St.",
+	phone: 2223334444,
+	menu: [{"Coffes"}, {"Tea"}, {"Food"}]
+};
 
 ### 5. Team Tracker App
 
@@ -61,18 +119,47 @@ This app shows you all the latest stats from your favorite sports teams. You can
 ```
 Write your answer here or in a separate js file.
 ```
+var favSportsTeam = {
+	falcons = {
+		teamStats = [{offense}, {defense}, {speacial-teams}],
+		positionStats = [{qbs}, {offensive-linemen}, {deffensive-linemen}, {kickers}...{}],
+		playerStats = [{matt ryan}, {julio jones},...{}],
+		coachingStats = [{head-coach}],
+		victories = {wins},
+		losses = {losses},
+		playoffs = [{pwins}, {plosses}],
+		superbowls = 0;
 
+}
 
 ### Final Thoughts:
 
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
+
+My first thought was what object to use: object literal notation vs. object constructor
+and possibly a mix of both? Possibly using arrays too with/without objects
+inside.
+
+I'm not even sure my psudo object structure is even correct?
+
+This was a little confusing because of the different types of data.
+Should I make this thing a dynamic or static object?
+Should I make an array with diffent objects? hmm?
+
+I wanted to make this as easy a possible when I access the data, I didn't
+want to make it harder it terms of accesibility for control flow.
+
+Do I have all the info a consuer/user would want to know?
+Research is obviously very important to find the right types of data to store.
 
 ```
 Write your answer here or in a separate js file.
 ```
 
 ### Reading and Videos for Tomorrow
-Now that you've had some practice really thinking about the data design of an app, we're going to learn about MongoDB, a no-SQL database. Starting tomorrow, our Express apps will be talking to the Mongo database through Mongoose. Since we're covering a LOT of ground tomorrow, take some time to introduce yourself to concepts and lingo surrounding MongoDB and Mongoose. You will _not_ have to memorize the technical details here.
+Now that you've had some practice really thinking about the data design of an app, we're going to learn about MongoDB, a no-SQL database. Starting tomorrow, our Express apps will be talking to the Mongo database through Mongoose.
+Since we're covering a LOT of ground tomorrow, take some time to introduce yourself to concepts and lingo surrounding MongoDB and Mongoose.
+You will _not_ have to memorize the technical details here.
 
 - [MongoDB's Ridiculously Cheery Promo video: 2mins video](https://www.youtube.com/watch?v=CvIr-2lMLsk)
 - [The Good and Bad of MongoDB: 30mins video](https://www.youtube.com/watch?v=hWxnRi_WXtg)
