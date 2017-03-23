@@ -104,15 +104,34 @@ router.post('/:id/items', function(req, res){
     user.items.push(new Item({name: req.body.name}));
     user.save(function(err){
       if (err) console.log(err);
-      res.send(user);
+      res.redirect('/users');
     });
   });
 });
 
+//Show the user the new item.
+router.get('/:id/items/new', function (req, res){
+  User.findById(req.params.id)
+    .exec(function (err, user){
+      if (err) { console.log(err) }
+      res.render('items/new', {
+        user: user
+      });
+    });
+});
+
+
+// router.get('/new', function(req, res) {
+//   res.render('users/new.hbs')
+// });
+
+
+
+
 // REMOVE AN ITEM
 router.delete('/:userId/items/:id', function(req, res){
   User.findByIdAndUpdate(req.params.userId, {
-    $pull:{
+    $pull:{//Pull is removing an item or items...double check!
       items: {_id: req.params.id}
     }
   })

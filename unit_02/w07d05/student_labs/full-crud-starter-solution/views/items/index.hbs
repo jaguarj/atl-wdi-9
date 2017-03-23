@@ -8,4 +8,10 @@
     </div>
     <br/>
   {{/each}}
+
+  <!-- create a "Add new item" link to lead to a NEW controller action
+  that will render a new.hbs view -->
+  <div>
+  	<a href="/users/{{user.id}}/items/new">Add New Item</a>
+  </div>
 </ul>
