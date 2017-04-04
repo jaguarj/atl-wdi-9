@@ -20,17 +20,10 @@
   <!-- FILL IN THE BLANKS! -->
     <ul id="criminals">
       <li ng-repeat="criminal in criminals.all" data-id="">
-        <strong>{{criminal.vm.name}}</strong> <em>{{criminal.location}}</em> <span class='status {{criminal.status}}'>{{criminal.status}}</span>
+        <strong>{{criminal.name}}</strong> <em>{{criminal.location}}</em> <span class='status {{criminal.status}}'>{{criminal.status}}</span>
         <button class='delete' ng-click="criminals.deleteCriminal(criminal)">X</button>
       </li>
     </ul>
-
-    <!-- If loading criminals is true, insert p tag with message "Loading... "-->
-    <p ng-if="criminals.loadingAll">
-
-      Loading...
-
-    </p>
 
 <!-- ADD ng-submit to the form -->
     <form ng-submit="Criminals.addCriminal()">

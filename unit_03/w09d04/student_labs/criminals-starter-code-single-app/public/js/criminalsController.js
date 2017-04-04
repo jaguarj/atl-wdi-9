@@ -23,10 +23,11 @@ function  CriminalsController($http) {
 			.get('/criminals')
 			.then(function showResponse(response){
 			   vm.all = response.data.criminals;
-			}, function showReject(response) {
+			}); function showReject(response) {
 			   console.log(repsonse.message);
-			});
+			};
 	}
+
 
 	function addCriminal() {
 		$http
@@ -34,7 +35,7 @@ function  CriminalsController($http) {
 			.then(function showResponse(response){
 				vm.all.push(response.data.criminal);
 				vm.newCriminal = {};
-			},  function showReject(response)
+				function showReject(response)
 				console.log(response.data.message);
 			});
 	}
@@ -49,6 +50,7 @@ function  CriminalsController($http) {
 					return criminal._id !== currentCriminal._id;
 			});
 
-	}
+		}
 
+	}
 }
