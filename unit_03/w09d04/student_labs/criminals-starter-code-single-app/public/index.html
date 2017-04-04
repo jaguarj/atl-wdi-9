@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- ADD ng-app to the html tag -->
-<html>
+<html ng-app="InfamousCriminals">
 <head>
   <meta charset="UTF-8">
   <title>Infamous Criminals</title>
@@ -15,31 +15,41 @@
   <h1>Infamous Criminals</h1>
 
 <!-- ADD ng-controller to the section tag -->
-  <section>
+  <section ng-controller="CriminalsController as criminals">
 
   <!-- FILL IN THE BLANKS! -->
     <ul id="criminals">
-      <li ng-repeat="" data-id="">
-        <strong>{{}}</strong> <em>{{}}</em> <span class='status {{}}'>{{}}</span>
-        <button class='delete' ng-click="">X</button>
+      <li ng-repeat="criminal in criminals.all" data-id="">
+        <strong>{{criminal.vm.name}}</strong> <em>{{criminal.location}}</em> <span class='status {{criminal.status}}'>{{criminal.status}}</span>
+        <button class='delete' ng-click="criminals.deleteCriminal(criminal)">X</button>
       </li>
     </ul>
 
+    <!-- If loading criminals is true, insert p tag with message "Loading... "-->
+    <p ng-if="criminals.loadingAll">
+
+      Loading...
+
+    </p>
+
 <!-- ADD ng-submit to the form -->
-    <form>
+    <form ng-submit="Criminals.addCriminal()">
+
       <div>
-        <label for="newCriminal-name">Name:</label>
+        <label for="newCriminal-name">Name:{{criminal.name}}</label>
         <input type="text" id="newCriminal-name" ng-model="criminals.newCriminal.name" placeholder="Prof. Moriarty">
       </div>
+
       <div>
-        <label for="newCriminal-location">Location:</label>
+        <label for="newCriminal-location">Location:{{criminal.location}}</label>
         <input type="text" id="newCriminal-location" ng-model="criminals.newCriminal.location" placeholder="Reichenbach Falls, CH">
       </div>
+          {{ 4 + 5 }}
       <div>
-        <label for="newCriminal-status">Status:</label>
+        <label for="newCriminal-status">Status:{{criminal.status}}</label>
 
 <!-- ADD ng-model to the select tag -->
-        <select id="newCriminal-status">
+        <select id="newCriminal-status" ng-model="criminals.newCriminal.status">
           <option value="" disabled>- - Please Select One - -</option>
           <option value="Alive">Alive</option>
           <option value="Dead">Dead</option>

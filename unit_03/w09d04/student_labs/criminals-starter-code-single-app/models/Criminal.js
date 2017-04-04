@@ -6,5 +6,14 @@ var CriminalSchema = mongoose.Schema({
 	status: String
 });
 
+
+
+
+
+
+
+
+
+
 module.exports = mongoose.model('Criminal', CriminalSchema);
 
