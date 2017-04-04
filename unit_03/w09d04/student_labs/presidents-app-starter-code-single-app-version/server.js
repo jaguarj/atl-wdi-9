@@ -10,6 +10,7 @@ var app = express();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/presidents-app');
 
+
 // Set up engine stuff and middleware
 	// Defining what views to use and what templating engine if we need it.
 
@@ -17,6 +18,11 @@ app.use(cors());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+var presidentsController = require("./controllers/presidents.js");
+app.use('/presidents', presidentsController);
+
 app.use(express.static('public'));
 
 // Load in routes.
