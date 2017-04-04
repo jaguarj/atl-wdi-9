@@ -16,7 +16,7 @@ var UserSchema = new Schema({
   updated_at: Date,
   items: [ItemSchema]
 });
-
+// Embeded schema above.
 UserSchema.pre('save', function(next){
   now = new Date();
   this.updated_at = now;

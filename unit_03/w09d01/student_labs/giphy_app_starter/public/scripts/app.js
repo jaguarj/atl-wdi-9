@@ -18,14 +18,17 @@
 // });
 
 
+$(function() {
 
-
-
-$(".git-gif").click(function(){
+//$.get is a jQuery and Ajax operation.
+$('.get-gif').on('click', function() {
    $.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg')
-  .done(function(data){
-    console.log(data);
-  });
+  		.done(function (data) { //Done is a callback that says run the data below it when done with the GET request.
+    		console.log(data.data.image_url);
+    		$('.image-jumbotron').attr('src', data.data.image_url);
+  		});
+    })
+})
 
 
 

@@ -2,8 +2,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var hbs = require('hbs');//Added hbs for lab work.
 
-
+app.set('view engine', 'hbs');//Set view engine lab work.
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 

@@ -57,11 +57,19 @@ Touch a file `forEach_exercise.js`, practice using `forEach` with the following 
 
 1. Log each word in `words` in upper case using `forEach`.
 
+
+
+
+
   ```
   words = ["Ho", "Chi", "Minh", "City", "was", "once", "known", "as", "Prey", "Nokor"];
 
   => logs ["HO", "CHI", "MINH", "CITY", "WAS", "ONCE", "KNOWN", "AS", "PREY", "NOKOR"]
   ```
+
+
+
+
 
 2. Log each number in `squareMe` square value in the array using `forEach`.
 

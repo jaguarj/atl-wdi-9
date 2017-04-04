@@ -13,12 +13,22 @@
     <section ng-controller="PresidentsController as presidents">
       <h1>The Presidents of the United States of America</h1>
 
+    <!--   <pre>{{ presidents | json }}</pre> use to load the data for testing -->
+
       <ul id="presidents">
         <li ng-repeat="president in presidents.all">
-          <strong>{{president.name}}</strong> <em>({{president.start}} - {{president.end}})</em>
+
+          <strong>{{president.name}}</strong>
+
+          <!-- <button ng-click="presidents.deletePresident(president)">Delete</button> -->
+
+          <em>({{president.start}} - {{president.end}})</em>
+
+          <button ng-click="presidents.deletePresident(president)">Delete</button>
+
         </li>
       </ul>
-
+<!-- Add President -->
       <form class="add-president" ng-submit='presidents.addPresident()'>
         <div>
           <label for="new-president-name">President's Name</label>
@@ -37,6 +47,7 @@
 
         <div>
           <input type="submit" value="Add President">
+          <!-- When clicked, the addPresidents function will fire. -->
         </div>
       </form>
 
