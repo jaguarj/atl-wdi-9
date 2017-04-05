@@ -1,4 +1,4 @@
-  x<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -6,45 +6,87 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/criminalsController.js"></script>
+  <script src="js/services/criminalService.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-messages.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-app='InfamousCriminals'>
-
   <h1>Infamous Criminals</h1>
   <section ng-controller='CriminalsController as criminals'>
-
     <ul id="criminals">
       <li ng-repeat="criminal in criminals.all">
         <strong>{{criminal.name}}</strong> <em>{{criminal.location}}</em> <span class='status {{criminal.status | lowercase }}'>{{criminal.status | uppercase}}</span>
         <button class='delete' ng-click="criminals.deleteCriminal(criminal)">X</button>
       </li>
     </ul>
-
-
-    <form ng-submit="criminals.addCriminal()" id="newCriminal">
+    <form ng-controller="formCtrl as ctrl"
+          ng-submit="criminals.addCriminal()"
+          class="form-horizontal container"
+          id="newCriminal"
+          name="myForm"
+          novalidate>
       <div>
         <label for="newCriminal-name">Name:</label>
-        <input type="text" id="newCriminal-name" ng-model="criminals.newCriminal.name" placeholder="Prof. Moriarty">
+        <input type="text"
+          name="criminalName"
+          class="form-control"
+          id="newCriminal-name"
+          ng-model="criminals.newCriminal.name"
+          ng-minlength="3"
+          ng-maxlength="10"
+          placeholder="Prof. Moriarty"
+          required>
+      </div>
+      <div class="error-messages" ng-messages="myForm.criminalName.$error">
+          <div ng-message="required">Username is required</div>
+          <div ng-message="minlength">Username is too short</div>
+          <div ng-message="maxlength">Username is too long</div>
       </div>
       <div>
         <label for="newCriminal-location">Location:</label>
-        <input type="text" id="newCriminal-location" ng-model="criminals.newCriminal.location" placeholder="Reichenbach Falls, CH">
+        <input type="text"
+              name="criminalLocation"
+              id="newCriminal-location"
+              ng-model="criminals.newCriminal.location"
+              placeholder="Reichenbach Falls, CH"
+              required>
+      </div>
+      <div class="error-messages" ng-messages="myForm.criminalLocation.$error">
+          <div ng-message="required">Location is required</div>
       </div>
       <div>
         <label for="newCriminal-status">Status:</label>
-        <select id="newCriminal-status" ng-model='criminals.newCriminal.status'>
+        <select id="newCriminal-status"
+              name="criminalStatus"
+              ng-model='criminals.newCriminal.status'
+              required>
           <option value="" disabled>- - Please Select One - -</option>
           <option value="Alive">Alive</option>
           <option value="Dead">Dead</option>
           <option value="Unknown" selected>Unknown</option>
         </select>
       </div>
+      <div class="form-group">
+      <label class="col-xs-3 control-label text-right">Zip Code</label>
+      <div class="col-xs-9">
+      <input type="text"
+            class="form-control"
+            name="zipcode"
+            ng-model="ctrl.formData.zipcode"
+            ng-pattern="/^(\d{5}(-\d{4})?|[A-Z]\d[A-Z] *\d[A-Z]\d)$/"
+            required />
+      </div>
+      <div class="error-messages" ng-messages="myForm.zipcode.$error">
+        <div ng-message="required">Zip Code is required</div>
+        <div ng-message="pattern">Please type a valid U.S. or Canadian zip code.</div>
+      </div>
       <div>
-        <input type="submit" value="Add Criminal">
+        <input ng-disabled="myForm.$invalid"
+        type="submit"
+        value="Add Criminal">
       </div>
     </form>
-
   </section>
-
 </body>
 </html>
