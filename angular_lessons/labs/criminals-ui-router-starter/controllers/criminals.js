@@ -3,7 +3,7 @@ var router = express.Router()
 var bodyParser = require('body-parser') //parses information from POST
 var methodOverride = require('method-override') //used to manipulate POST
 var Criminal = require('../models/Criminal');
-
+// Routes for BACK_END
 // GET
 router.get('/', function indexAction(request, response) {
   Criminal.find(function(error, criminals) {

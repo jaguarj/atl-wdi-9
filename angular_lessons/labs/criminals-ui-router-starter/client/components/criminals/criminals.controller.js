@@ -6,6 +6,12 @@ function CriminalsController(CriminalsService) {
 	// WHAT THIS CONTROLLER HAS / DOES THAT IS CONNECTED TO THE VIEW
 	vm.criminals = [];
 	vm.loading = true;
+	// vm.addCriminal = addCriminal;
+	// vm.newCriminal = newCriminal;
+	// vm.deleteCriminal = deleteCriminal;
+	// vm.editCriminal = editCriminal;
+
+
 
 
 	// activate === BEST PRACTICE, ALWAYS DO IT, EVEN IF EMPTY
@@ -14,7 +20,7 @@ function CriminalsController(CriminalsService) {
 	function activate() {
 		loadAllCriminals();
 	}
-	
+
 
 	// HOW IT DOES STUFF
 	function loadAllCriminals() {
@@ -25,6 +31,13 @@ function CriminalsController(CriminalsService) {
 				vm.loading = false;
 			});
 	}
+
+	// function addCriminal() {
+	// 	CriminalsSerivce
+	// }
+
 }
+// 	function
+// }
 
 module.exports = CriminalsController;
