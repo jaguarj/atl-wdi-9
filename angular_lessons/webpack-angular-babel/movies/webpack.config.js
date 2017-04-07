@@ -8,18 +8,14 @@ module.exports = {
     },
     output: {
         path: __dirname + '/public/js',
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js' // This will be called app.bundle.js
     },
     module: {
-        loaders: [
+        loaders: [ // ES2015 Transpiler for outputting old JS in lew of programming with new JS for browsers.
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
-            },
-            {
-                test: /\.html$/,
-                loader: 'html-loader'
             }
         ]
     }
