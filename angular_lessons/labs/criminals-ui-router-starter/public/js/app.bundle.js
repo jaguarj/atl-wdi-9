@@ -214,6 +214,7 @@ function uiRouterSetup($statProvider, $urlRouterProvider) {
 
 	$urlRouterProvider.otherwise('/');
 }
+// Use $stateRoutes for only Home, About, FAQS.
 
 /***/ }),
 /* 6 */

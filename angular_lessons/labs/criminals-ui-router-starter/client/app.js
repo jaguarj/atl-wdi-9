@@ -8,7 +8,7 @@ angular
 
 uiRouterSetup.$inject = ['$stateProvider', '$urlRouterProvider'];
 function uiRouterSetup($statProvider, $urlRouterProvider) {
-	$statProvider
+	$stateProvider
 		.state('home', {
 			url: '/',
 			template: '<home></home>'
