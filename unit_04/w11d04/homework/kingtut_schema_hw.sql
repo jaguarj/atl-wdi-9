@@ -12,11 +12,12 @@ CREATE TABLE users (
 );
 
 CREATE TABLE tuts (
-    id SERIAL PRIMARY KEY,
-    id SERIAL FOREIGN KEY(user_id),
-    user_id SERIAL PRIMARY KEY,
-    name VARCHAR(255),
-    link TEXT,
-    created_at NOT NULL DEFAULT NOW(),
+	id SERIAL PRIMARY KEY,
+	id SERIAL FOREIGN KEY(user_id),
+	user_id SERIAL PRIMARY KEY,
+	name VARCHAR(255),
+	link TEXT,
+	created_at NOT NULL DEFAULT NOW(),
 	updated_at NOT NULL DEFAULT NOW()
 );
+
