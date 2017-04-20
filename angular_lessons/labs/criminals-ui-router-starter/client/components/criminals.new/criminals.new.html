@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form ng-submit="$ctrl.addCriminal($ctrl.newCriminal)">
 <input type="text" required="required" placeholder="Add New Criminal" ng-model="$ctrl.newCriminal.name">
 <input type="text" required="required" placeholder="Add New Criminal" ng-model="$ctrl.newCriminal.crime">
@@ -5,3 +6,16 @@
 
 <input type="submit" value="Add Criminals">
 </form>
+=======
+<div>
+	<form ng-submit="$ctrl.createCriminal()">
+		<label for="name">Name:</label>
+		<input id="name" type="text" ng-model="$ctrl.newCriminal.name" />
+
+		<label for="name">Crime:</label>
+		<input id="crime" type="text" ng-model="$ctrl.newCriminal.crime" />
+
+		<button type="submit">Create</button>
+	</form>
+</div>
+>>>>>>> 3e3180896ffa1dda19c82ac4ba2305f00d2a4db4

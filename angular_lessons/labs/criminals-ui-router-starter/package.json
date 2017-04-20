@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "angular": "^1.6.4",
+<<<<<<< HEAD
     "angular-ui": "^1.0.0",
+=======
+>>>>>>> 3e3180896ffa1dda19c82ac4ba2305f00d2a4db4
     "angular-ui-router": "^0.4.2",
     "body-parser": "^1.13.2",
     "cookie-parser": "~1.3.5",
@@ -20,9 +23,13 @@
     "jade": "~1.11.0",
     "method-override": "^2.3.4",
     "mongoose": "^4.0.7",
+<<<<<<< HEAD
     "morgan": "~1.6.1",
     "router": "^1.3.0",
     "webpack": "^2.3.3"
+=======
+    "morgan": "~1.6.1"
+>>>>>>> 3e3180896ffa1dda19c82ac4ba2305f00d2a4db4
   },
   "license": "ISC",
   "devDependencies": {
