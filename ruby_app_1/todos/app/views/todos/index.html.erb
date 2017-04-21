@@ -1,0 +1,15 @@
+<h1>Todos#index</h1>
+<p>Find me in app/views/todos/index.html.erb</p>
+
+<h1><%= @message %></h1>
+
+<h1><%= @category.name.capitalize %> Todos</h1>
+
+<ul><% @todos.each do |todo| %>
+	<li><h3>Todo <%= todo.content %></h3></li>
+	<% end %>
+</ul>
+
+
+
+

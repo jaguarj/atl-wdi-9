@@ -297,7 +297,11 @@ $ rails db:migrate
 In the future, when we generate a model, we'll give it the fields that we know we want. This is better than first creating an empty table then adding in the fields. The syntax for this is:
 
 ```bash
+<<<<<<< HEAD
 $ rails generate model Todos content:text priority:number
+=======
+$ rails generate model Todo content:text priority:number
+>>>>>>> 203a9eef1f30cd471464002baf3e3139f87d4dee
 ```
 
 * View `db/schema.rb`
