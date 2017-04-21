@@ -298,7 +298,11 @@ In the future, when we generate a model, we'll give it the fields that we know w
 
 ```bash
 <<<<<<< HEAD
+<<<<<<< HEAD
 $ rails generate model Todos content:text priority:number
+=======
+$ rails generate model Todo content:text priority:number
+>>>>>>> 203a9eef1f30cd471464002baf3e3139f87d4dee
 =======
 $ rails generate model Todo content:text priority:number
 >>>>>>> 203a9eef1f30cd471464002baf3e3139f87d4dee
